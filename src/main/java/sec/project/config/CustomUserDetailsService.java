@@ -1,9 +1,7 @@
 package sec.project.config;
 
-import java.lang.reflect.Member;
 import java.util.Arrays;
 import javax.annotation.PostConstruct;
-import javax.validation.constraints.Null;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
