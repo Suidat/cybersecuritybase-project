@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome</title>
+</head>
+<body>
+<h1 th:text="${user.status}">user</h1>
+<h2 th:text="${user.username}">username</h2>
+<p>
+    <ul>
+    <!-- To fix the XSS problem change th:utext to th:text (A7)-->
+        <li th:each="message : ${messages}" th:utext="${message.message}">message</li>
+    </ul>
+</p>
+
+<form action="#" th:action="@{|/user/${id}|}" method="POST">
+    <p><label for="message">Note</label>: <input type="text" name="message" id="message"/></p>
+    <p><input type="submit" value="Submit" /></p>
+</form>
+
+<form action="#" th:action="@{|/search/${id}|}" method="POST">
+    <p><label for="content">Search</label>: <input type="text" name="content" id="content"/></p>
+    <p><input type="submit" value="Submit" /></p>
+</form>
+</body>
+</html>

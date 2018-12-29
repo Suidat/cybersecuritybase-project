@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome</title>
+</head>
+<body>
+<ul>
+    <li th:each="message : ${search}" th:text="${message.message}">content</li>
+</ul>
+</body>
+</html>
